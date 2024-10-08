@@ -11,6 +11,12 @@ import ShopContextProvider from "./Context/ShopContext";
 import banner_kids from "./Components/Assets/Frontend_Assets/banner_kids.png";
 import banner_mens from "./Components/Assets/Frontend_Assets/banner_mens.png";
 import banner_women from "./Components/Assets/Frontend_Assets/banner_women.png";
+import DevelopedBy from "./Components/DevelopedBy/DevelopedBy"
+import Technologies from "./Components/Technologies/Technologies";
+import About from "./Components/About/About";
+import Office from "./Components/Office/Office";
+import Contact from "./Components/Contact/Contact";
+
 function App() {
   return (
     <div>
@@ -36,8 +42,17 @@ function App() {
             </Route>
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<LoginSignup />} />
+
+            <Route path="/developedBy" element={<DevelopedBy />} />
+            <Route path="/technologies" element={<Technologies />} />
+            <Route path="/about" element={<About/>}/>
+            <Route path="/office" element={<Office/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+
+
           </Routes>
           <Footer />
+  
         </BrowserRouter>
       </ShopContextProvider>
     </div>

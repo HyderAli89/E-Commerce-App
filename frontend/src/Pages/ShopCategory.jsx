@@ -6,12 +6,14 @@ import Item from "../Components/Item/Item";
 
 const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
+  console.log(props.category)
+  console.log(all_product)
   return (
     <div className="shop-category">
       <img className="shopcategory-banner" src={props.banner} alt="" />
       <div className="shopcategory-indexSort">
         <p>
-          <span>Showing 1-12</span> out of Product
+          <span> Explore Trending  collections</span> 
         </p>
         <div className="shopcategory-sort">
         <pre>Sort by</pre> <img src={dropdown_icon} alt="" />

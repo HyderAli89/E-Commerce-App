@@ -55,11 +55,12 @@
 .loginsignup-login span{
      color:#ff4141;
      font-weight: 700;
+     cursor: pointer;
 }
 .loginsignup-agree{
     display:flex;
     align-items: center;
-    margin-top:10px;
+    margin-top:30px;
     gap:20px;
     font-size: 18px;
     font-weight: 500;

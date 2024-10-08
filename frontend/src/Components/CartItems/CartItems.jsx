@@ -3,8 +3,26 @@ import { useContext } from 'react'
 import { ShopContext } from '../../Context/ShopContext'
 import './CartItems.css'
 import remove_icon  from "../Assets/Frontend_Assets/cart_cross_icon.png"
+import Swal from 'sweetalert2';
 export const CartItems = () => {
     const {all_product,cartItems,removeFromCart,getTotalCartAmount}=useContext(ShopContext)
+    const handlepayment = () =>{
+        Swal.fire({
+            title: 'Thank you for shopping!',
+            text: ` Your item's will deliver soon.`,
+            icon: 'success',
+            confirmButtonText: 'Awesome'
+          });
+    }
+    const handlecoupon = () =>{
+        Swal.fire({
+            title: 'Sorry!',
+            text: 'Coupoun Code Not Available',
+            icon: 'info',
+            showCloseButton: true,  
+            confirmButtonText: 'Okay'
+          });          
+    }
     return (
     <div className="cartitems">
         <div className="cartitems-format-main">
@@ -51,13 +69,13 @@ export const CartItems = () => {
                         <h3>${getTotalCartAmount()}</h3>
                     </div>
                 </div>
-                <button>Proced to checkout</button>
+                <button onClick={handlepayment}>Proced to checkout</button>
             </div>
             <div className="cartitems-promocode">
                 <p>If you have a promo code, Enter it here</p>
                 <div className="cartitems-promobox">
                     <input type="text" placeholder='Promo code' />
-                    <button>Submit</button>
+                    <button onClick={handlecoupon}>Submit</button>
                 </div>
             </div>
         </div>
