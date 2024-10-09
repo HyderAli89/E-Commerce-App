@@ -1,9 +1,12 @@
-import React from "react";
+// import React from "react";
 import "./Footer.css";
 import footer_logo from "../Assets/Frontend_Assets/logo_big.png";
 import whatsapp_icon from "../Assets/Frontend_Assets/whatsapp_icon.png";
 import pintester_icon from "../Assets/Frontend_Assets/pintester_icon.png";
 import instagram_icon from "../Assets/Frontend_Assets/instagram_icon.png";
+import {Link} from "react-router-dom"
+
+
 export const Footer = () => {
   return (
     <div className="footer">
@@ -12,11 +15,11 @@ export const Footer = () => {
         <p>Forever</p>
       </div>
       <ul className="footer-links">
-        <li>Company</li>
-        <li>Product</li>
-        <li>Offices</li>
-        <li>About</li>
-        <li>Contact</li>
+       <Link to={`/developedBy`} >Developed BY</Link>
+       <Link to={`/technologies`}><li>Technolgies used</li></Link>
+        <Link to={`/office`}><li>Offices</li></Link>
+        <Link to={`/about`}><li>About</li></Link>
+        <Link to={`/contact`}>contact</Link>
       </ul>
       <div className="footer-social-icon">
         <div className="footer-icons-container">
@@ -31,7 +34,7 @@ export const Footer = () => {
       </div>
       <div className="footer-copyright">
         <hr/>
-        <p>Copyright  @Forever 2024 - All Right Reserved</p>
+        <p>Copyright  @Forever 2024  HYDERALI - All Right Reserved</p>
       </div>
     </div>
   );
